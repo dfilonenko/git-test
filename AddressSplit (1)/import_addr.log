@@ -1,0 +1,57 @@
+
+SQL*Loader: Release 11.2.0.1.0 - Production on Ïò. Ãðó 25 10:12:21 2015
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   import_addr.CTL
+Data File:      convert1.csv
+  Bad File:     convert1.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     64 rows, maximum of 256000 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table "IMPORT_CLNT_EXAMPLE_TEMP", loaded from every logical record.
+Insert option in effect for this table: REPLACE
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+COMMENT1                            FIRST     *   ;       CHARACTER            
+ID_IN_BANK                           NEXT     *   ;       CHARACTER            
+C_P_INDEX                            NEXT     *   ;       CHARACTER            
+C_P_REGION                           NEXT     *   ;       CHARACTER            
+C_P_AREA                             NEXT     *   ;       CHARACTER            
+C_P_CITY                             NEXT     *   ;       CHARACTER            
+C_P_STREET                           NEXT     *   ;       CHARACTER            
+
+Record 469: Rejected - Error on table "IMPORT_CLNT_EXAMPLE_TEMP", column ID_IN_BANK.
+ORA-01400: cannot insert NULL into ("IMPORT_USER"."IMPORT_CLNT_EXAMPLE_TEMP"."ID_IN_BANK")
+
+
+Table "IMPORT_CLNT_EXAMPLE_TEMP":
+  468 Rows successfully loaded.
+  1 Row not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 115584 bytes(64 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:           469
+Total logical records rejected:         1
+Total logical records discarded:        0
+
+Run began on Ïò. Ãðó 25 10:12:21 2015
+Run ended on Ïò. Ãðó 25 10:12:26 2015
+
+Elapsed time was:     00:00:05.29
+CPU time was:         00:00:00.06
